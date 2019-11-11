@@ -244,7 +244,7 @@ Define the meaning of the following symbols as they relate to paths and use them
 
 ~	// home directory
 
-/ // root directory
+/ 	// root directory
 ```
 
 
