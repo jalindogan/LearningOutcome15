@@ -637,7 +637,7 @@ until [ i -gt 10]
 #case statement 
 case $animal in
 	"dog") echo "woof";;
-  "cat") echo "meow";;
+  	"cat") echo "meow";;
 esac
 
 #function
