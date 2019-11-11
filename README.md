@@ -29,51 +29,52 @@ Define the functionality of the movement commands:
 ``` VIM (Command Mode)
 // MOVEMENT COMMANDS
 
-h		// move cursor to the left
+h	// move cursor to the left
 
-j		// move cursor down
+j	// move cursor down
 
-k		// move cursor up
+k	// move cursor up
 
 l 	// move cursor to the right
 
-w		// move to the start of a word to the right
+w	// move to the start of a word to the right
 
 W 	// move to the start of a word to the right 
-		// (including the punctuation)
+	// (including the punctuation)
 
 e 	// move to the end of a word to right
 
-E		// move to the end of a word to the right
-		// (including the punctuation)
+E	// move to the end of a word to the right
+	// (including the punctuation)
 
-b		// move to the start of a word to the left
+b	// move to the start of a word to the left
 
-B		// move to the start of a word to the left
-		// (including the punctuation)
+B	// move to the start of a word to the left
+	// (including the punctuation)
 
 gg 	// move to the beginning of the file
 
-G		// move to the end of the file
+G	// move to the end of the file
 
-0		// move to the beginning of a line
+0	// move to the beginning of a line
 
-$		// move to the end of a line
+$	// move to the end of a line
 
-^		// move to the first nonblank (character) position of the current line
+^	// move to the first nonblank (character) position of the current line
 
-(		// move to the beginning of a sentence of a line (going up)
+(	// move to the beginning of a sentence of a line (going up)
 
-)		// move to the beginning of a sentence of a line (going down)
+)	// move to the beginning of a sentence of a line (going down)
 
-{		// move to the beginning of a paragraph 
+{	// move to the beginning of a paragraph 
 
-}		// move to the end of a paragraph
+}	// move to the end of a paragraph
 
-:{#}	// where {#} represents a number, this command allows the user to 				// go to line number
+:{#}	// where {#} represents a number, this command allows the user to 				
+	// go to line number
 
 {#}G	// where {#} represents a number, this command allows the user to
-			// go to the line number
+	// go to the line number
 ```
 
 
@@ -95,7 +96,8 @@ o		// insert newline below current line and enter insert mode
 
 O		// insert newline above current line and enter insert mode
 
-<esc> // (where <esc> is the escape key) // exit insert mode
+<esc> 		// (where <esc> is the escape key) 
+		// exit insert mode
 		
 ```
 
@@ -106,9 +108,9 @@ Define the functionality of the delete, yank, and paste commands:
 ```VIM (command mode)
 // COMMAND MODE
 
-p		// paste after cursor
+p	// paste after cursor
 
-P		// paste before cursor
+P	// paste before cursor
 
 yy	// yank/copy line
 
@@ -130,11 +132,11 @@ d^	// delete from cursor to the beginning of the line
 
 d}	// delete from cursor to the end of paragraph
 
-D		// delete from cursor to the end line (same as d$)
+D	// delete from cursor to the end line (same as d$)
 
-x		// cut character in cursor
+x	// cut character in cursor
 
-X		// cut character before cursor
+X	// cut character before cursor
 ```
 
 Define the functionality of the charging and replacing text commands:
@@ -144,9 +146,9 @@ Define the functionality of the charging and replacing text commands:
 
 cw	// cuts from cursor to end of word and enters insert mode
 
-J		// Joins current line and line below.
+J	// Joins current line and line below.
 	
-R		// enter REPLACE mode
+R	// enter REPLACE mode
 
 r{char} // where {char} represents a character
 ```
@@ -156,7 +158,7 @@ Define the functionality of searching commands:
 ```VIM (command mode)
 // SEARCH MODE (using '/' or '?')
 
-n		// next occurrence
+n	// next occurrence
 
 N 	// previous occurrence
 
@@ -165,13 +167,13 @@ N 	// previous occurrence
 ?{pattern}	// search above cursor for {pattern}
 
 :%s/{old}/{new}/	// replaces single occurrence of {old} with {new}
-									// in each line
+			// in each line
 
 :%s/{old}/{new}/g	// replaces all occurrences of {old} with {new}
-									// in each line
+			// in each line
 									
 :%s/{old}/{new}/c	// replaces single occurrence of {old} with {new}
-									// in each line with confirmation
+			// in each line with confirmation
 ```
 
 
@@ -200,11 +202,11 @@ ZZ	// saves changes if modified, and quits file if not modified
 Define the functionality of higher level control commands:
 
 ```VIM (command mode)
-u // Undos last change
+u 		// Undos last change
 
-U // Undo or Restore last change 
+U 		// Undo or Restore last change 
 
-. // repeat last command
+. 		// repeat last command
 
 {#}{command}	// (where {#} is a number and {command} is a vim command to
 							// be repeated # times)
@@ -350,32 +352,32 @@ Explain the variables PS1 and PS2 and which is displayed to the terminal, includ
 Define the functionality of and apply common Unix commands and associated options: 
 
 ```bash
-cat <file> # concatenate a file to the output stream
+cat <file> 	# concatenate a file to the output stream
 
-cd <PATH> # go to path
-					# if <PATH> is blank, default is home directory (~)
+cd <PATH> 	# change diectory or go to path
+		# if <PATH> is blank, default is home directory (~)
 
-clear # clear output stream
+clear		# clear output stream
 
 cp [-p -r] <source> <target>	# copy files from <source> to <target>
-															# [-p] tag is to preserve the attribute of 																									# the file when copying
-															# [-r] tag is to recursively copy a source
+				# [-p] tag is to preserve the attribute of 										# the file when copying
+				# [-r] tag is to recursively copy a source
 
 date # outputs the date and time at the time of execution
 
 diff # outputs the differences between two files
 
 echo [-n -e] 	# prints the subsequent input with a newline
-							# [-n] prints without a newline
-							#	-e allows you to add on \a, \b, etc backslash options
+		# [-n] prints without a newline
+		# -e allows you to add on \a, \b, etc backslash options
 
 kill <PID>	# kills process of PID
 
 ls [-a -l] 	# prints current directory's content
-						# [-a] prints all files (including hidden)
-						# [-l] prints files into a list format
+		# [-a] prints all files (including hidden)
+		# [-l] prints files into a list format
 
-man	<command> # prints manual/instructions for bash <command>
+man <command> # prints manual/instructions for bash <command>
 
 mkdir # make a directory of the subsequential input name
 
@@ -388,15 +390,15 @@ pwd # prints current directory path
 read # read input (useful mainly in shell scripting)
 
 rm [-r -d -f]	# remove file or empty directory
-							# [-r] removes contents of directory or file recursively
-							# [-d] attempt to remove directory
-							# [-f] attempt to remove files without prompting for 				
-							# confirmation, regardless of permissions. 
+		# [-r] removes contents of directory or file recursively
+		# [-d] attempt to remove directory
+		# [-f] attempt to remove files without prompting for 				
+		# confirmation, regardless of permissions. 
 
 touch # change file access and modification times/make a new file
 
 wc [-l]	# finds the word count for a file.
-				# [-l] finds the line count of a file
+	# [-l] finds the line count of a file
 
 ```
 
@@ -406,13 +408,13 @@ Define the functionality of and apply Unix filtering commands:
 
 ```bash
 grep [-e -i -n -r] <pattern>	# finds instances of a given <pattern>
-															# [-e] specify multiple patterns or use pattern with a -
-                              # [-i] ignore cases when searching
-                              # [-n] add line number with output
-                              # [-r] look for it recursively in all files in directory
+				# [-e] specify multiple patterns or use pattern with a -
+			      	# [-i] ignore cases when searching
+                            	# [-n] add line number with output
+                           	# [-r] look for it recursively in all files in directory
 
 sort [-r] 	# will display contents of the file sorted
-						# [-r] will sort a file in reverse
+		# [-r] will sort a file in reverse
 
 uniq 	# shows unique lines found in a file
 
@@ -438,19 +440,19 @@ Define the functionality of and apply common Unix compression commands and assoc
 
 ```bash
 tar [-c -f -v -x -z] 	# tar is used to archive a group a files
-											# -c creates an archive
-											# -f make filename
-											# -v verbose output
-											# -x extract
-											# filter archive to gzip
-										
+			# -c creates an archive
+			# -f make filename
+			# -v verbose output
+			# -x extract
+			# filter archive to gzip
+
 
 gzip [-r -d] 	# gzip is used to zip files (compress files)
-							# -r is used to recursively zip a directory and contents
-							# -d is used to zip a directory
+		# -r is used to recursively zip a directory and contents
+		# -d is used to zip a directory
 
-gunzip [-r] # gunzip is used to unzip a zipped file/directory
-						# -r unzip for all files in the directory
+gunzip [-r]	# gunzip is used to unzip a zipped file/directory
+		# -r unzip for all files in the directory
 ```
 
 
@@ -558,8 +560,8 @@ $0 	# name of the script
 
 $1 	# first argument
 
-${number} # (where {number} is a value from 1 to and including 9)
-					# subsequent arguments corresponding to number
+${number} 	# (where {number} is a value from 1 to and including 9)
+		# subsequent arguments corresponding to number
 ```
 
 
@@ -652,7 +654,7 @@ Describe the functionality of the following control statements:
 ```shell
 continue	# continue used to go back into loop
 	
-break	# used to exit the loop
+break		# used to exit the loop
 ```
 
 
@@ -705,7 +707,7 @@ Recognize and apply standard comparators and options for **test**:
 
 -ge # greater than or equal
 
--d 	# check if input is a directory
+-d # check if input is a directory
 
 -f # check if input is not a directory
 
