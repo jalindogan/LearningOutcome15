@@ -6,7 +6,7 @@
 
 Explain the relevance of vim:
 
-> Vim is used to ensure the fasted and most efficient way to program and script any code. 
+> Vim is used to ensure the fastest and most efficient way to program and script any code is done. 
 
 
 
