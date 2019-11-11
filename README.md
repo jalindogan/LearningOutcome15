@@ -491,13 +491,13 @@ Recall and use the syntax for creating and accessing lists of variables.
 >
 >- To set a list element - square bracket 
 >
->- ```bash
+>  ```bash
 >  $ colors[1]=yellow
 >  ```
 >
 >- To view a list element:
 >
->- ```bash
+>  ```bash
 >  $ echo ${colors[1]}
 >  ```
 
